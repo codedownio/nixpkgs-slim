@@ -6,6 +6,8 @@ A special version of Nixpkgs, which only supports a few basic fetchers and opera
 * `fetchFromGitHub`
 * `fetchgit`
 * `symlinkJoin`
+* `nix-prefetch-git`
+* `nix-prefetch-github`
 
 This is used as a lightweight (distributable) Nixpkgs that be used to bootstrap Nix builds.
 

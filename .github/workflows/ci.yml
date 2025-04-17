@@ -19,10 +19,10 @@ jobs:
         - macOS-latest # arm64
 
         file:
-        - .github/exprs/fetchFromGitHub.nix
-        - .github/exprs/fetchgit.nix
-        - .github/exprs/nix-prefetch-git.nix
-        - .github/exprs/nix-prefetch-github.nix
+        - fetchFromGitHub.nix
+        - fetchgit.nix
+        - nix-prefetch-git.nix
+        - nix-prefetch-github.nix
 
     steps:
     - uses: actions/checkout@v4
@@ -33,4 +33,4 @@ jobs:
 
     - name: Build
       run : |
-        nix-build --show-trace "${{matrix.file}}"
+        nix-build --show-trace ".github/exprs/${{matrix.file}}"

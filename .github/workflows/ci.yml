@@ -66,9 +66,9 @@ jobs:
 
         nix-build --show-trace -E "$expr"
 
-    - name: nix-prefetch-git
-      run : |
-        nix-build --show-trace -E "(import ./. {}).nix-prefetch-git"
+    # - name: nix-prefetch-git
+    #   run : |
+    #     nix-build --show-trace -E "(import ./. {}).nix-prefetch-git"
 
     - name: nix-prefetch-github
       run : |
